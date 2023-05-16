@@ -21,7 +21,7 @@ class TestWebServices:
         assert WebServices().get_version_time() == "IP地址数据库，及时更新"
 
     @pytest.mark.parametrize('ip, expected', [('10.10.10.10', '10.10.10.10')])
-    def test_get_contry_city_by_ip(self):
+    def test_get_contry_city_by_ip(self,ip,expected):
         assert expected in str(WebServices().get_contry_city_by_ip(ip))
 
 
